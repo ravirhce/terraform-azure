@@ -6,7 +6,6 @@ resource "azurerm_windows_virtual_machine" "myvm" {
   size               = "Standard_B2as_v2"
   admin_username        = "var.admin_username"
   admin_password        = "var.admin_password"
-
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
