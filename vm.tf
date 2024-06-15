@@ -4,8 +4,8 @@ resource "azurerm_windows_virtual_machine" "myvm" {
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.mynic.id]
   size               = "Standard_B2as_v2"
-  admin_username        = "azureuser"
-  admin_password        = "Ry02966253279!"
+  admin_username        = "var.admin_username"
+  admin_password        = "var.admin_password"
 
   os_disk {
     caching              = "ReadWrite"
